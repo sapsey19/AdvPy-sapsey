@@ -8,8 +8,7 @@ def find_all(string, substring):
             return
         yield start                 #credit to https://stackoverflow.com/questions/4664850/how-to-find-all-occurrences-of-a-substring for help with yield
         start += len(substring)
-def reInit(word, dashes, gueses, usedWords):
-    print('here')
+def reInit(word, dashes, gueses, usedWords):    
     word = random.choice(wordList)
     guesses.clear()
     usedWords.clear()
@@ -31,28 +30,25 @@ r = open('hangmanPics.txt', 'r')
 hangmanPics = r.read().split(',')   #inits ascii hangman pictures, credit to https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c for the ascii art
 state = 0                           #state, or stage of the game. Effectively the 'lives'
 
-while(1):
-    print('word: ', word)
+while(1):   
     if(dashes == word):
         print('\n')
         print('Congratulations, you won! The word was: "{}"'.format(word))
         temp = input('If you want to play again, type "p". If you want to quit, type "q" ')
         if(temp == 'p'):
             state = 0
-            word, dashes, guesses, usedWords = reInit(word, dashes, guesses, usedWords)
-            print('new word: ', word)
+            word, dashes, guesses, usedWords = reInit(word, dashes, guesses, usedWords)           
             continue
         elif(temp == 'q'):
             print('Thanks for playing!')
             break
-    if(state == 6):
+    if(state == 6):                 #fail state
         print(hangmanPics[6])
         print('Sorry, game over. The word was: "{}"'.format(word))   
         temp = input('If you want to play again, type "p". If you want to quit, type "q" ')
         if(temp == 'p'):
             state = 0
-            word, dashes, guesses, usedWords = reInit(word, dashes, guesses, usedWords)
-            print('new word: ', word)
+            word, dashes, guesses, usedWords = reInit(word, dashes, guesses, usedWords)            
             continue
         elif(temp == 'q'):
             print('Thanks for playing!')
@@ -61,6 +57,10 @@ while(1):
     print(dashes)
     print ('Letters tried: ', ', '.join(guesses))
     guess = input('Enter a guess: ')
+    if(guess == ''):
+        print('Please enter a character.')
+        continue
+    guess = guess.lower()
     print('\n')
     if(len(guess) > 1):
         print('Please only enter one character at a time. Try again.')
@@ -81,5 +81,4 @@ while(1):
             continue
         guesses.append(guess)
         print('Incorrect.')
-        state += 1
-    
+        state += 1   
