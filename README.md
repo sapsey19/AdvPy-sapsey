@@ -4,6 +4,6 @@
 
 ## Assignments
   - Hangman
-    - Simple Hangman game. Selects a random word from a list of ~30. Word is shown as dashes('-'), when a player correctly guesses a letter, that letter/letters are revealed. Prints out ascii art for each stage of the game.
+    - Simple Hangman game. Selects a random word from a list of ~30. Word is shown as dashes('-'). When a player correctly guesses a letter, that letter(s) are revealed. Prints out ascii art for each stage of the game.
 
 ## Labs
