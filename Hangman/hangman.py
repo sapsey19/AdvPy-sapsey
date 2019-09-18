@@ -80,5 +80,6 @@ while(1):
         guesses.append(guess)
         print('Incorrect.')
         state += 1   
-
+f.close()
+r.close()
 input('Thanks for playing! Press any key to quit. ')
