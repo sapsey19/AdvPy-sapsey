@@ -1,5 +1,5 @@
 # Advanced Programming Python
-- Junior Year
+- Fall 2019
 - Sean Apsey
 
 ## Assignments
