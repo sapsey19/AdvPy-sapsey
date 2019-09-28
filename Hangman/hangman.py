@@ -24,7 +24,7 @@ guesses, usedWords = list(), list()
 
 dashes = ''
 for i in range(0, len(word)):
-    dashes += '-'                   #creates a dashes version of the word
+    dashes += '-'                   #creates a dashed version of the word
 
 r = open('hangmanPics.txt', 'r')
 hangmanPics = r.read().split(',')   #inits ascii hangman pictures, credit to https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c for the ascii art
@@ -39,8 +39,7 @@ while(1):
             state = 0
             word, dashes, guesses, usedWords = reInit(word, dashes, guesses, usedWords)           
             continue
-        elif(temp == 'q'):
-            print('Thanks for playing!')
+        elif(temp == 'q'):            
             break
     if(state == 6):                 #fail state
         print(hangmanPics[6])
@@ -51,7 +50,6 @@ while(1):
             word, dashes, guesses, usedWords = reInit(word, dashes, guesses, usedWords)            
             continue
         elif(temp == 'q'):
-            print('Thanks for playing!')
             break
     print(hangmanPics[state])
     print(dashes)
@@ -82,3 +80,6 @@ while(1):
         guesses.append(guess)
         print('Incorrect.')
         state += 1   
+f.close()
+r.close()
+input('Thanks for playing! Press any key to quit. ')
