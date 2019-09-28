@@ -1,0 +1,7 @@
+Links to all Kattis problems
+
+SimpleAddition: https://open.kattis.com/problems/simpleaddition
+Statistics: https://open.kattis.com/problems/statistics
+
+Recount: https://open.kattis.com/problems/recount
+SimonSays: https://open.kattis.com/problems/simon
