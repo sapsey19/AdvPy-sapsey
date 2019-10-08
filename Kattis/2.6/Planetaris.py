@@ -3,16 +3,16 @@ import sys
 def answer(n, a, ships):
     ships.sort()
     counter = 0 
-    # for i in range (0, n):
-    #     if ships[i] < a:
-    #         counter += 1
-    #         a -= ships[i] + 1
-    i = 0
-    while i < n:
+    for i in range (0, len(ships)):
         if ships[i] < a:
             counter += 1
             a -= ships[i] + 1
-        i += 1
+    i = 0
+    # while i < n:
+    #     if ships[i] < a:
+    #         counter += 1
+    #         a -= ships[i] + 1
+    #     i += 1
     return counter
 
 def solve():
@@ -24,8 +24,13 @@ def solve():
     print(answer(n, a, ships))
 
 def test():
+    x = 1
+    for i in range(0, 100000000000000000000000000000):
+        x += 1
+    print(x)
     assert(answer(1, 0, [10000000000]) == 0)
     assert(answer(3, 6, [1, 2, 3]) == 2)
+    #assert(answer(1000000))
     print('All test cases passed!')
 
 if __name__ == "__main__":
