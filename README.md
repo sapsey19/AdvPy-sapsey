@@ -8,13 +8,12 @@
 
   - Kattis
     - Problems:
-      - Simple Addition, difficulty 1.9: https://open.kattis.com/problems/simpleaddition
       - Statistics, difficulty 1.8: https://open.kattis.com/problems/statistics
+      - Simple Addition, difficulty 1.9: https://open.kattis.com/problems/simpleaddition      
       - Recount, difficulty 2.2: https://open.kattis.com/problems/recount
       - Simon Says, difficulty 2.2: https://open.kattis.com/problems/simon
-      - Wizard of Odds, difficulty 2.9: https://open.kattis.com/problems/wizardofodds
       - Another Candies, difficulty 2.8: https://open.kattis.com/problems/anothercandies
-    
+      - Wizard of Odds, difficulty 2.9: https://open.kattis.com/problems/wizardofodds    
     - All the solutions are in the Kattis folder, along with proof of passing and their difficulty at time of solving.
     - Grade deserved: 100%. I solved 6 problems, all of which are at or above the requirements for a 90%. Each answer also has automated testing that tests for edge cases.  
     
